@@ -1,0 +1,160 @@
+/* ===============================
+   GLOBAL STYLES & VARIABLES
+================================= */
+:root {
+    --primary-gradient: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+    --navbar-gradient: linear-gradient(90deg, #141e30, #243b55);
+    --card-radius: 14px;
+    --btn-radius: 8px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--primary-gradient);
+    color: #2b2f38;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===============================
+   NAVBAR
+================================= */
+.navbar {
+    background: var(--navbar-gradient) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.35rem;
+    letter-spacing: -0.3px;
+}
+
+/* ===============================
+   CARDS
+================================= */
+.card {
+    border: none;
+    border-radius: var(--card-radius);
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    object-fit: cover;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+.btn {
+    border-radius: var(--btn-radius);
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-gradient {
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 22px;
+}
+
+.btn-gradient:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(238, 9, 121, 0.35);
+    color: #ffffff;
+}
+
+/* ===============================
+   TABLES
+================================= */
+.table {
+    background: #ffffff;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+}
+
+/* ===============================
+   FORM INPUTS (Scoped)
+================================= */
+/* Apply rounding only to standalone form controls */
+.form-control:not(.input-group .form-control),
+.form-select {
+    border-radius: 8px;
+    padding: 9px 14px;
+    border: 1px solid #ced4da;
+}
+
+/* Keep input-groups flush and neatly connected */
+.input-group > .btn {
+    border-radius: 0;
+}
+
+.input-group > :first-child {
+    border-top-left-radius: 8px !important;
+    border-bottom-left-radius: 8px !important;
+}
+
+.input-group > :last-child {
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+
+/* ===============================
+   DARK MODE
+================================= */
+body.dark-mode {
+    background: #121418;
+    color: #e6e8ec;
+}
+
+body.dark-mode .card {
+    background-color: #1a1d24;
+    color: #e6e8ec;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .table {
+    --bs-table-bg: #1a1d24;
+    --bs-table-color: #e6e8ec;
+    border-color: #2d323d;
+}
+
+body.dark-mode .table-light {
+    --bs-table-bg: #222630;
+    --bs-table-color: #e6e8ec;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: #222630;
+    color: #f1f3f5;
+    border-color: #343a46;
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+    background-color: #282d39;
+    color: #ffffff;
+    border-color: #ffc107;
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.2);
+}
+
+body.dark-mode .alert {
+    background-color: #222630;
+    color: #e6e8ec;
+    border-color: #343a46;
+}
+
+body.dark-mode .text-muted {
+    color: #9aa0a6 !important;
+}
